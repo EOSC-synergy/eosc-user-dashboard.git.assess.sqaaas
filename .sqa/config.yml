@@ -1,0 +1,72 @@
+config:
+  credentials: []
+  project_repos:
+    github.com/EOSC-synergy/sqaaas-tooling:
+      branch: main
+      repo: https://github.com/EOSC-synergy/sqaaas-tooling
+    github.com/cyfronet-fid/eosc-user-dashboard:
+      branch: master
+      repo: https://github.com/cyfronet-fid/eosc-user-dashboard.git
+environment:
+  JPL_DOCKERFORCEBUILD: enabled
+  JPL_KEEPGOING: enabled
+sqa_criteria:
+  QC.Acc:
+    repos:
+      github.com/cyfronet-fid/eosc-user-dashboard git:
+        commands:
+        - /usr/bin/env sh .sqa/script.goopy-lime-wrasse.sh
+        container: qc.acc_skanky-amber-harrier
+  QC.Doc:
+    repos:
+      github.com/cyfronet-fid/eosc-user-dashboard find_doc_files.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.smelly-khaki-cougar.sh
+        container: qc.doc_gummy-fuchsia-skunk
+      github.com/cyfronet-fid/eosc-user-dashboard git:
+        commands:
+        - /usr/bin/env sh .sqa/script.stealthy-eggplant-capybara.sh
+        container: qc.doc_skinny-alizarin-moth
+      github.com/cyfronet-fid/eosc-user-dashboard markdownlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.muggy-ruby-moorhen.sh
+        container: qc.doc_gimpy-lemon-dormouse
+  QC.Lic:
+    repos:
+      github.com/cyfronet-fid/eosc-user-dashboard licensee:
+        commands:
+        - /usr/bin/env sh .sqa/script.wiggy-fuchsia-manatee.sh
+        container: qc.lic_randy-olivine-snail
+  QC.Sec:
+    repos:
+      github.com/cyfronet-fid/eosc-user-dashboard bandit:
+        commands:
+        - /usr/bin/env sh .sqa/script.hilly-pear-echidna.sh
+        container: qc.sec_lumpy-fuchsia-uguisu
+  QC.Sty:
+    repos:
+      github.com/cyfronet-fid/eosc-user-dashboard flake8:
+        commands:
+        - /usr/bin/env sh .sqa/script.grumpy-auburn-sponge.sh
+        container: qc.sty_sleepy-cornflower-bullfrog
+      github.com/cyfronet-fid/eosc-user-dashboard hadolint:
+        commands:
+        - /usr/bin/env sh .sqa/script.goopy-salmon-camel.sh
+        container: qc.sty_skinny-olivine-crab
+      github.com/cyfronet-fid/eosc-user-dashboard jsonlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.scanty-goldenrod-barnacle.sh
+        container: qc.sty_tasty-chocolate-antelope
+  QC.Uni:
+    repos:
+      github.com/cyfronet-fid/eosc-user-dashboard pytest:
+        commands:
+        - /usr/bin/env sh .sqa/script.queasy-indigo-meerkat.sh
+        container: qc.uni_foggy-ochre-dog
+  QC.Ver:
+    repos:
+      github.com/cyfronet-fid/eosc-user-dashboard get_git_tags.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.surly-gamboge-hare.sh
+        container: qc.ver_trippy-plum-numbat
+timeout: 5400
