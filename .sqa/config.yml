@@ -15,58 +15,58 @@ sqa_criteria:
     repos:
       github.com/cyfronet-fid/eosc-user-dashboard git:
         commands:
-        - /usr/bin/env sh .sqa/script.goopy-lime-wrasse.sh
-        container: qc.acc_skanky-amber-harrier
+        - /usr/bin/env sh .sqa/script.smelly-green-eel.sh
+        container: qc.acc_squirrely-orchid-clam
   QC.Doc:
     repos:
       github.com/cyfronet-fid/eosc-user-dashboard find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.smelly-khaki-cougar.sh
-        container: qc.doc_gummy-fuchsia-skunk
+        - /usr/bin/env sh .sqa/script.sleazy-mustard-dunker.sh
+        container: qc.doc_scaly-platinum-dingo
       github.com/cyfronet-fid/eosc-user-dashboard git:
         commands:
-        - /usr/bin/env sh .sqa/script.stealthy-eggplant-capybara.sh
-        container: qc.doc_skinny-alizarin-moth
+        - /usr/bin/env sh .sqa/script.messy-cerise-woodlouse.sh
+        container: qc.doc_hasty-lilac-bird
       github.com/cyfronet-fid/eosc-user-dashboard markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.muggy-ruby-moorhen.sh
-        container: qc.doc_gimpy-lemon-dormouse
+        - /usr/bin/env sh .sqa/script.craggy-myrtle-deer.sh
+        container: qc.doc_tacky-lavender-seahorse
   QC.Lic:
     repos:
       github.com/cyfronet-fid/eosc-user-dashboard licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.wiggy-fuchsia-manatee.sh
-        container: qc.lic_randy-olivine-snail
+        - /usr/bin/env sh .sqa/script.messy-gold-beagle.sh
+        container: qc.lic_stuffy-aquamarine-salamander
   QC.Sec:
     repos:
       github.com/cyfronet-fid/eosc-user-dashboard bandit:
         commands:
-        - /usr/bin/env sh .sqa/script.hilly-pear-echidna.sh
-        container: qc.sec_lumpy-fuchsia-uguisu
+        - /usr/bin/env sh .sqa/script.sickly-crimson-quokka.sh
+        container: qc.sec_pretty-orchid-weasel
   QC.Sty:
     repos:
       github.com/cyfronet-fid/eosc-user-dashboard flake8:
         commands:
-        - /usr/bin/env sh .sqa/script.grumpy-auburn-sponge.sh
-        container: qc.sty_sleepy-cornflower-bullfrog
+        - /usr/bin/env sh .sqa/script.messy-ruby-ant.sh
+        container: qc.sty_ready-salmon-mouse
       github.com/cyfronet-fid/eosc-user-dashboard hadolint:
         commands:
-        - /usr/bin/env sh .sqa/script.goopy-salmon-camel.sh
-        container: qc.sty_skinny-olivine-crab
+        - /usr/bin/env sh .sqa/script.pretty-orange-argentino.sh
+        container: qc.sty_chummy-firebrick-binturong
       github.com/cyfronet-fid/eosc-user-dashboard jsonlint:
         commands:
-        - /usr/bin/env sh .sqa/script.scanty-goldenrod-barnacle.sh
-        container: qc.sty_tasty-chocolate-antelope
+        - /usr/bin/env sh .sqa/script.blurry-cinnamon-dog.sh
+        container: qc.sty_pasty-ruby-loon
   QC.Uni:
     repos:
       github.com/cyfronet-fid/eosc-user-dashboard pytest:
         commands:
-        - /usr/bin/env sh .sqa/script.queasy-indigo-meerkat.sh
-        container: qc.uni_foggy-ochre-dog
+        - /usr/bin/env sh .sqa/script.flabby-cardinal-tzu.sh
+        container: qc.uni_blurry-sangria-mule
   QC.Ver:
     repos:
       github.com/cyfronet-fid/eosc-user-dashboard get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.surly-gamboge-hare.sh
-        container: qc.ver_trippy-plum-numbat
+        - /usr/bin/env sh .sqa/script.tacky-goldenrod-havanese.sh
+        container: qc.ver_shaky-eggplant-dingo
 timeout: 5400
